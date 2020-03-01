@@ -11,6 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::view('/login', 'components.login');
+Route::post('/login', 'AdminController@login');
+Route::get('/logout', 'AdminController@logout');
