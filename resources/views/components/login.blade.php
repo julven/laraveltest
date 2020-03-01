@@ -12,15 +12,18 @@
                     <span class="card-title">Login</span>
                     <form action="/login" method="POST">
                         @csrf
-                        <div class="input-field">
-                            <input placeholder="Placeholder" id="username" type="text" name="username">
+                    <div class="input-field ">
+                        <input placeholder="Placeholder" id="username" type="text" name="username" class="{{$errors->any() ? 'invalid' : ''}}">
                             <label for="username">Username</label>
                         </div>
 
                         <div class="input-field">
-                            <input placeholder="Placeholder" id="password" name="password" type="password">
+                            <input placeholder="Placeholder" id="password" name="password" type="password" class="{{$errors->any() ? 'invalid' : ''}}">
                             <label for="password">Password</label>
                         </div>
+                        @if ($errors->any())
+                            <p class="red-text">Invalid username or password</p>
+                        @endif
 
                         <button class="btn waves-effect" type="submit">Login</button>
                     </form>

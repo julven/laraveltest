@@ -10,9 +10,11 @@ class AdminController extends Controller
 {
     
     public function login(Request $request) {
-        
-        // return dd($request->all());
-        // $login = $req->only('username', 'password');
+
+        $validate = $request->validate([
+            'username' => 'required|min:5|max:25',
+            'password' => 'required'
+        ]);
         
         
         $login = Auth::attempt([
@@ -20,13 +22,17 @@ class AdminController extends Controller
             'password' => $request->input('password')
         ]);
 
-        return redirect('login');
+        if($login) return back()->withInput()->withErrors(['msg'=> "wrong username or password"]);
+
+        else return redirect('home');
     }
 
     public function logout() {
         Auth::logout();
         return redirect('login');
     }
+
+    
 
     
 }
