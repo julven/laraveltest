@@ -7,7 +7,7 @@ use App\User;
 class UserController extends Controller
 {
     public function index() {
-      
+        
     }
 
     public function read($id) {
@@ -53,7 +53,8 @@ class UserController extends Controller
     }
 
     public function list() {
-        return view('components.list');
+        return view('components.list')->with(['users' => User::all()]);
+        
     }
 
     public function account() {

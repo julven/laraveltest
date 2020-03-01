@@ -9,21 +9,22 @@
                     <hr>
                     <table >
                         <tbody>
+                            @foreach ($users as $user)
                             <tr>
                                 <td>
-                                    <div style="width: 120px; height: 120px; border: 1px solid black">
-                                        <img src="" alt="" style="width: 100%; height:100%;">
+                                    <div style="width: 100px; height: 100px; border: 1px solid black">
+                                    <img src="{{asset($user->image)}}" alt="" style="width: 100%; height:100%;">
                                     </div>
                                     
                                 </td>
                                 <td>
-                                    <div style="line-height: 18px">
+                                    <div style="line-height: 20px; max-width: 160px">
                                         <small>name:</small>
-                                        <p> sample sample</p>
+                                        <span style="float: right"> {{$user->fname}} {{$user->lname}}</span><br>
                                         <small>gender:</small>
-                                        <p> sample </p>
+                                        <span style="float: right"> {{$user->gender}} </span><br>
                                         <small>birthday:</small>
-                                        <p> 00-00-0000</p>
+                                        <span style="float: right"> {{$user->bday}}</span><br>
                                     </div>
                                 </td>
                                 <td>
@@ -31,6 +32,8 @@
                                     <button class="btn waves-effect" style="width: 100%">Delete</button>
                                 </td>
                             </tr>
+                            @endforeach
+                            
 
                           
                         </tbody>
@@ -39,4 +42,5 @@
             </div>
         </div>
     </div>
+    {{-- {{dd($users[0]->fname)}} --}}
 @endsection
