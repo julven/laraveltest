@@ -29,7 +29,8 @@ Route::middleware(['authcheck'])->group( function () {
     Route::post('/add', "UserController@store");
     Route::get('/edit/{id}', 'UserController@useredit');
     Route::put('/edit/{id}', "UserController@update");
-   
+    Route::get('/account', "AdminController@account");
+    Route::put('/account', "AdminController@update");
     
 });
 

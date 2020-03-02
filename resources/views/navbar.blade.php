@@ -8,7 +8,7 @@
             <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li><a href="/home">Home</a></li>
                 <li><a href="/list">List</a></li>
-                <li><a >Account</a></li>
+                <li><a href="/account">Account</a></li>
                 <li><a href="/logout">Logout</a></li>
             </ul>
             @endif
