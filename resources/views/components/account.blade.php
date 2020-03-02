@@ -7,7 +7,7 @@
             <div class="card-content">
                 <div class="card-title">
                     Info
-                   
+                   <a class="waves-effect btn btn-small" style="float:right" href="{{ url()->previous() }}">Back</a>
                 </div>
                 <hr>
                 @if ($errors->any() && array_keys($errors->messages())[0] != 'password')

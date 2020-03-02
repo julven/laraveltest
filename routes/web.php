@@ -23,6 +23,7 @@ Route::get('/logout', 'AdminController@logout');
 Route::middleware(['authcheck'])->group( function () {
     Route::get('/home', 'UserController@home');
     Route::get('/list', 'UserController@list');
+    // Route::get('/list/{page}', 'UserController@pagedlist');
     Route::delete('/list', 'UserController@destroy');
     Route::get('/account', 'UserController@account');
     Route::get('/add', 'UserController@useradd');

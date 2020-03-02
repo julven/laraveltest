@@ -71,9 +71,16 @@ class UserController extends Controller
         // return dd($data);
         return view('components.home')->with(['data' => $data]);
     }
+    
 
     public function list() {
-        return view('components.list')->with(['users' => User::all()]);
+        return view('components.list')->with(['users' => User::paginate(5)]);
+        
+    }
+    public function pagedlist($page) {
+        if(!is_numeric($page)) return redirect('list');
+        // return dd( User::paginate(5));
+        return view('components.list')->with(['users' => User::paginate(5)]);
         
     }
 

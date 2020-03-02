@@ -15,7 +15,7 @@
                         @endif
                         
                     </div>
-
+                    <hr>
                     <form  method="POST"  enctype="multipart/form-data">
                         @if ($type=="edit")
                             @method('PUT')
@@ -104,13 +104,13 @@
                         @if ($type == 'add')
                             <div style="text-align: right">
                                 <button class="btn waves-effect" type="submit">Add</button>&nbsp;
-                                <a class="btn waves-effect" href="/list">Back</a>
+                                <a class="btn waves-effect" href="{{ url()->previous() }}">Back</a>
                             </div>
                         @endif
                         @if ($type == 'edit')
                         <div style="text-align: right">
                             <button class="btn waves-effect" type="submit">Edit</button>&nbsp;
-                            <a class="btn waves-effect" href="/list">Back</a>
+                        <a class="btn waves-effect" href="{{ url()->previous() }}">Back</a>
                         </div>
                        
                         @endif
