@@ -2,7 +2,7 @@
 
 @section('component')
     <div class="row">
-        <div class="col s10 m8 l6 xl5">
+        <div class="col s12 m7 l6 xl5">
             <div class="card">
                 <div class="card-content">
                     <span class="card-title">Summary</span>

@@ -2,6 +2,7 @@
 window.addEventListener('load', () => {
     var elems = document.getElementById('bday');
     var select = document.getElementById('selgender');
+    var sidebar = document.getElementById('mobile-demo');
    
     var instances = M.Datepicker.init(elems, {
         format: "mm-dd-yyyy",
@@ -9,7 +10,7 @@ window.addEventListener('load', () => {
         yearRange: [1930, (new Date()).getFullYear()]
     });
     var selgender = M.FormSelect.init(select, null);
-
+    var sidenav = M.Sidenav.init(sidebar, null);
 
     if(document.getElementById('imgchange') != null) {
         document.getElementById('imgchange').addEventListener('click', (e) => {
