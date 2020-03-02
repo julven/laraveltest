@@ -22,7 +22,7 @@ class AdminController extends Controller
             'password' => $request->input('password')
         ]);
 
-        if($login) return back()->withInput()->withErrors(['msg'=> "wrong username or password"]);
+        if(!$login) return back()->withInput()->withErrors(['msg'=> "wrong username or password"]);
 
         else return redirect('home');
     }
