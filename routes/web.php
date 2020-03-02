@@ -14,7 +14,7 @@
 // Route::get('/', function () {
 //     return view('welcome');
 // });
-
+Route::view('/', 'components.login');
 Route::view('/login', 'components.login');
 Route::post('/login', 'AdminController@login');
 Route::get('/logout', 'AdminController@logout');
