@@ -8,6 +8,7 @@ use App\Admin;
 
 class AdminController extends Controller
 {   
+    
     public function account () {
         return view('components.account')->with(['account' => Admin::find(Auth::user()->id)]);
     }

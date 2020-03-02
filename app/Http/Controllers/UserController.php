@@ -7,7 +7,7 @@ use App\User;
 class UserController extends Controller
 {
     public function index() {
-        
+       
     }
 
     public function read($id) {
@@ -64,7 +64,12 @@ class UserController extends Controller
     }
 
     public function home() {
-        return view('components.home');
+        $data['total'] = User::all()->count();
+        $data['male'] = User::where('gender','male')->count();
+        $data['female'] = User::where('gender','female')->count();
+
+        // return dd($data);
+        return view('components.home')->with(['data' => $data]);
     }
 
     public function list() {
