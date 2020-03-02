@@ -23,12 +23,13 @@ Route::get('/logout', 'AdminController@logout');
 Route::middleware(['authcheck'])->group( function () {
     Route::get('/home', 'UserController@home');
     Route::get('/list', 'UserController@list');
+    Route::delete('/list', 'UserController@destroy');
     Route::get('/account', 'UserController@account');
     Route::get('/add', 'UserController@useradd');
     Route::post('/add', "UserController@store");
     Route::get('/edit/{id}', 'UserController@useredit');
     Route::put('/edit/{id}', "UserController@update");
-    
+   
     
 });
 

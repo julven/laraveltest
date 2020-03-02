@@ -54,8 +54,13 @@ class UserController extends Controller
 
     }
 
-    public function destroy() {
-
+    public function destroy(Request $request) {
+        // return dd($request->id);
+        $user = User::findOrFail($request->id);
+        if(file_exists(public_path().$user->image)) unlink(public_path().$user->image);
+        $user->delete();
+        
+        return back();
     }
 
     public function home() {
