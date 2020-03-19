@@ -104,13 +104,13 @@
                         @if ($type == 'add')
                             <div style="text-align: right">
                                 <button class="btn waves-effect" type="submit">Add</button>&nbsp;
-                                <a class="btn waves-effect" href="{{ url()->previous() }}">Back</a>
+                                <a class="btn waves-effect" href="/list">Back</a>
                             </div>
                         @endif
                         @if ($type == 'edit')
                         <div style="text-align: right">
                             <button class="btn waves-effect" type="submit">Edit</button>&nbsp;
-                        <a class="btn waves-effect" href="{{ url()->previous() }}">Back</a>
+                        <a class="btn waves-effect" href="/list">Back</a>
                         </div>
                        
                         @endif
@@ -119,6 +119,6 @@
                 </div>
             </div>
         </div>
-        {{-- {{dd($type)}} --}}
+        {{-- {{dd(Request::url())}} --}}
     </div>
 @endsection

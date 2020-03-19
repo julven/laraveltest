@@ -89,7 +89,7 @@ class UserController extends Controller
     }
 
     public function useradd() {
-        
+        // return dd(url()->previous());
         return view('components.user_form')->with(['type' => 'add']);
     }
     public function useredit($id) {
