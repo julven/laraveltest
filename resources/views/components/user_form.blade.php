@@ -16,7 +16,7 @@
                         
                     </div>
                     <hr>
-                    <form  method="POST"  enctype="multipart/form-data">
+                    <form  method="POST"  enctype="multipart/form-data" id="user_form" >
                         @if ($type=="edit")
                             @method('PUT')
                         @endif
@@ -97,7 +97,11 @@
                                     name="image" 
                                     id="image">
                                 </div>
-                                <button class="btn waves-effect btn-small" style="width: 100px" id="imgchange">Change</button>
+                                <button 
+                                class="btn waves-effect btn-small" 
+                                style="width: 100px" 
+                                id="imgchange" 
+                                >Change</button>
                             @endif
                            
                         </div>
@@ -110,7 +114,7 @@
                         @if ($type == 'edit')
                         <div style="text-align: right">
                             <button class="btn waves-effect" type="submit">Edit</button>&nbsp;
-                        <a class="btn waves-effect" href="/list">Back</a>
+                            <a class="btn waves-effect" href="/list">Back</a>
                         </div>
                        
                         @endif
