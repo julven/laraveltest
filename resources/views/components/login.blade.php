@@ -13,12 +13,12 @@
                     <form action="/login" method="POST">
                         @csrf
                     <div class="input-field ">
-                        <input placeholder="Placeholder" id="username" type="text" name="username" class="{{$errors->any() ? 'invalid' : ''}}">
+                        <input autocomplete="off" autocapitalize="off" placeholder="Username" id="username" type="text" name="username" class="{{$errors->any() ? 'invalid' : ''}}">
                             <label for="username">Username</label>
                         </div>
 
                         <div class="input-field">
-                            <input placeholder="Placeholder" id="password" name="password" type="password" class="{{$errors->any() ? 'invalid' : ''}}">
+                            <input placeholder="Password" id="password" name="password" type="password" class="{{$errors->any() ? 'invalid' : ''}}">
                             <label for="password">Password</label>
                         </div>
                         @if ($errors->any())
