@@ -31,7 +31,7 @@
                                         </div>
                                     </td>
                                     <td>
-                                    <a href="/edit/{{$user->id}}" class="btn waves-effect" style="width: 100%;margin-bottom: 5px">Edit</a><br>
+                                        <a href="/edit/{{$user->id}}" class="btn waves-effect" style="width: 100%;margin-bottom: 5px">Edit</a><br>
                                         <button class="btn waves-effect" style="width: 100%" onclick="deletes({{$user->id}})">Delete</button>
                                         <form method="POST" id="userdel_{{$user->id}}">
                                             @method("DELETE")

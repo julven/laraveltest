@@ -20,3 +20,12 @@ $(window).on('load',() => {
         M.FormSelect.init(elem);
     }
 })
+
+let deletes = (id) => {
+  
+    let conf = confirm("Delete this use with id "+ id+"?");
+    if(conf) {
+        console.log(id)
+        $("#userdel_"+id).submit();
+    }
+}
