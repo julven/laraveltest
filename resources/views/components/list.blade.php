@@ -2,9 +2,9 @@
 
 @section('component')
     <div class="row">
-        <div class="col s10 m10 l9 xl7">
-            <div class="card" style="min-width: 400px">
-                <div class="card-content"  >
+        <div class="col s12 m10 l9 xl7">
+            <div class="card">
+                <div class="card-content">
                     <div class="card-title">List <a class="waves-effect btn" style="float:right" href="/add">New</a></div>
                     <hr>
                     <div style="min-height: 600px">
@@ -12,22 +12,20 @@
                             <tbody>
                                 @foreach ($users as $user)
                                 <tr>
-                                    <td>
+                                    <td class="hide-on-small-only">
                                         <div style="width: 100px; height: 100px; border: 1px solid lightgray">
                                             <img src="{{asset($user->image)}}" alt="" style="width: 100%; height:100%;">
-                                            
-                                        </div>
-                                        
-                                        
+                                        </div>    
                                     </td>
                                     <td>
+                                      
                                         <div style="line-height: 20px; max-width: 160px">
                                             <small>name:</small>
-                                            <span style="float: right"> {{$user->fname}} {{$user->lname}}</span><br>
+                                            <span style="float: right"><b> {{$user->fname}} {{$user->lname}}</b></span><br>
                                             <small>gender:</small>
-                                            <span style="float: right"> {{$user->gender}} </span><br>
+                                            <span style="float: right"> <b>{{$user->gender}}</b> </span><br>
                                             <small>birthday:</small>
-                                            <span style="float: right"> {{$user->bday}}</span><br>
+                                            <span style="float: right"><b> {{$user->bday}}</b></span><br>
                                         </div>
                                     </td>
                                     <td>

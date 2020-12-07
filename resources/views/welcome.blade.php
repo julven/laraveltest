@@ -21,7 +21,9 @@
         </div>
 
         <div class="container">
+           
             @yield('component')
+           
         </div>
         <style>
             #navbar {

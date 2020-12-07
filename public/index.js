@@ -20,6 +20,11 @@ $(window).on('load', () => {
         M.FormSelect.init(elem);
     }
 
+    if(document.querySelectorAll(".sidenav")) {
+        let elem = document.querySelectorAll(".sidenav");
+        M.Sidenav.init(elem);
+    }
+
     $("#imgchange").on("click", () => {
         $("#user_form").one("submit", e => {
             e.preventDefault();

@@ -18,7 +18,7 @@
     </div>
 </nav>
 
-<div class="sidenav " id="mobile-demo">
+<div class="sidenav" id="mobile-demo">
     
     <h4 style="padding: 0px 10px;">Admin</h4>
     <hr>

@@ -3,7 +3,7 @@
 @section('component')
     <div class="row">
         <div class="col s12 m10 l8 xl7">
-            <div class="card" style="min-width: 350px">
+            <div class="card">
                 <div class="card-content">
                     <div class="card-title">
                         Form

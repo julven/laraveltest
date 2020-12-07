@@ -33,6 +33,8 @@ Route::middleware(['authcheck'])->group( function () {
     Route::get('/account', "AdminController@account");
     Route::put('/account', "AdminController@update");
     
+    
+    
 });
 
 // Route::view('/home', 'components.home')->middleware('');
